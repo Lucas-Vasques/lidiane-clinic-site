@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 
 const officeImages = [
-  "/images/clinic-1.png",
-  "/images/clinic-2.png",
-  "/images/clinic-3.png",
-  "/images/clinic-4.png",
+  "/images/Clinic-1.png",
+  "/images/Clinic-2.png",
+  "/images/Clinic-3.png",
+  "/images/Clinic-4.png",
 ];
 
 export function ContactSection() {
