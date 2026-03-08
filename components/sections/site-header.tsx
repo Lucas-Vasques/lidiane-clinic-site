@@ -95,7 +95,7 @@ export function SiteHeader() {
               <div className="mt-8 flex items-center gap-3 border-b border-border pb-6">
                 <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-border/60 bg-white shadow-sm">
                   <Image
-                    src="/images/logo.png"
+                    src="/images/Logo-icon 1.png"
                     alt="Logo Dra. Lidiane Landim"
                     fill
                     className="object-contain p-1"
