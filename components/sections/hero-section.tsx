@@ -40,11 +40,11 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="rounded-full px-8 text-base shadow-lg shadow-primary/20"
+              className="w-full sm:w-auto"
             >
               <Link href="https://wa.me/message/CDM4GY5YCUKUA1" target="_blank">
                 <MessageCircle className="mr-2 size-5" />
-                Agende sua consulta
+                Agende sua consulta pelo WhatsApp
               </Link>
             </Button>
 
