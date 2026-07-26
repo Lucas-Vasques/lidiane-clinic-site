@@ -12,7 +12,6 @@ export const navLinks = [
   { label: "Quem sou", href: "#quem-sou" },
   { label: "Consultas", href: "#consultas" },
   { label: "Exames", href: "#exames" },
-  { label: "Blog", href: "/blog" },
   { label: "Contato", href: "#contato" },
 ];
 

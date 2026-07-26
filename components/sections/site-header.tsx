@@ -44,23 +44,15 @@ export function SiteHeader() {
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
-            {navLinks.map((item) => {
-              const isBlog = item.href === "/blog";
-
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`text-sm font-semibold transition ${
-                    isBlog
-                      ? "rounded-full bg-secondary px-4 py-2 text-secondary-foreground hover:bg-secondary/80"
-                      : "text-foreground/85 hover:text-primary"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+            {navLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-semibold text-foreground/85 transition hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">

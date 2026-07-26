@@ -1,0 +1,573 @@
+[1mdiff --git a/app/blog/[slug]/page.tsx b/app/blog/[slug]/page.tsx[m
+[1mdeleted file mode 100755[m
+[1mindex 20a3aa9..0000000[m
+[1m--- a/app/blog/[slug]/page.tsx[m
+[1m+++ /dev/null[m
+[36m@@ -1,134 +0,0 @@[m
+[31m-import Image from "next/image";[m
+[31m-import Link from "next/link";[m
+[31m-import { ArrowLeft, CalendarDays } from "lucide-react";[m
+[31m-[m
+[31m-const posts = [[m
+[31m-  {[m
+[31m-    title: "Quando escutar com calma muda todo o tratamento",[m
+[31m-    excerpt:[m
+[31m-      "Uma jornada de investigação cuidadosa em uma criança com dor abdominal recorrente, mostrando como atenção aos detalhes pode transformar o cuidado.",[m
+[31m-    slug: "quando-escutar-com-calma-muda-o-tratamento",[m
+[31m-    image: "/images/story-1.png",[m
+[31m-    category: "Consulta",[m
+[31m-    date: "08 mar 2026",[m
+[31m-    content: [[m
+[31m-      "Cada paciente chega ao consultório com uma história única. Muitas vezes, sintomas que parecem pequenos ou passageiros escondem um padrão que precisa ser observado com calma.",[m
+[31m-      "Em situações como dor abdominal recorrente, a escuta cuidadosa da criança e da família ajuda a organizar melhor os sinais, entender a evolução do quadro e definir o melhor caminho para investigação.",[m
+[31m-      "Mais do que tratar sintomas isolados, o objetivo é construir clareza, segurança e confiança durante todo o processo de cuidado.",[m
+[31m-    ],[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Pequenos sinais, grandes respostas",[m
+[31m-    excerpt:[m
+[31m-      "Um caso que reforça a importância de avaliar sintomas persistentes com sensibilidade, clareza e acompanhamento próximo da família.",[m
+[31m-    slug: "pequenos-sinais-grandes-respostas",[m
+[31m-    image: "/images/story-2.png",[m
+[31m-    category: "Gastropediatria",[m
+[31m-    date: "06 mar 2026",[m
+[31m-    content: [[m
+[31m-      "Alguns quadros começam com sinais discretos, mas persistentes. Por isso, observar frequência, intensidade e contexto dos sintomas faz diferença.",[m
+[31m-      "A avaliação cuidadosa permite identificar quando é hora de tranquilizar, quando é preciso investigar mais e como orientar a família com clareza.",[m
+[31m-      "O acompanhamento próximo ajuda a transformar incerteza em direção segura.",[m
+[31m-    ],[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Cuidar também é orientar a família",[m
+[31m-    excerpt:[m
+[31m-      "Uma história sobre acolhimento, explicação clara e construção de confiança durante o processo de diagnóstico e tratamento.",[m
+[31m-    slug: "cuidar-tambem-e-orientar-a-familia",[m
+[31m-    image: "/images/story-3.png",[m
+[31m-    category: "Acompanhamento",[m
+[31m-    date: "04 mar 2026",[m
+[31m-    content: [[m
+[31m-      "Em pediatria, o cuidado acontece em conjunto com a família. Explicar cada etapa de forma simples e respeitosa é parte essencial do tratamento.",[m
+[31m-      "Quando responsáveis entendem o que está sendo investigado, quais são os objetivos e quais sinais devem ser observados, o acompanhamento se torna mais leve e eficiente.",[m
+[31m-      "Cuidar também é comunicar com empatia.",[m
+[31m-    ],[m
+[31m-  },[m
+[31m-];[m
+[31m-[m
+[31m-export default async function BlogPostPage({[m
+[31m-  params,[m
+[31m-}: {[m
+[31m-  params: Promise<{ slug: string }>;[m
+[31m-}) {[m
+[31m-  const { slug } = await params;[m
+[31m-  const post = posts.find((item) => item.slug === slug);[m
+[31m-[m
+[31m-  if (!post) {[m
+[31m-    return ([m
+[31m-      <main className="section-spacing bg-background">[m
+[31m-        <div className="container-shell">[m
+[31m-          <Link[m
+[31m-            href="/blog"[m
+[31m-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary"[m
+[31m-          >[m
+[31m-            <ArrowLeft className="size-4" />[m
+[31m-            Voltar para o blog[m
+[31m-          </Link>[m
+[31m-[m
+[31m-          <div className="mt-10 rounded-[28px] border bg-white p-8 shadow-sm">[m
+[31m-            <h1 className="text-3xl font-extrabold text-foreground">[m
+[31m-              Artigo não encontrado[m
+[31m-            </h1>[m
+[31m-            <p className="mt-4 text-muted-foreground">[m
+[31m-              O conteúdo que você procura não está disponível no momento.[m
+[31m-            </p>[m
+[31m-          </div>[m
+[31m-        </div>[m
+[31m-      </main>[m
+[31m-    );[m
+[31m-  }[m
+[31m-[m
+[31m-  return ([m
+[31m-    <main className="bg-background">[m
+[31m-      <section className="section-spacing">[m
+[31m-        <div className="container-shell">[m
+[31m-          <Link[m
+[31m-            href="/blog"[m
+[31m-            className="inline-flex items-center gap-2 text-sm font-semibold text-primary"[m
+[31m-          >[m
+[31m-            <ArrowLeft className="size-4" />[m
+[31m-            Voltar para o blog[m
+[31m-          </Link>[m
+[31m-[m
+[31m-          <article className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-4xl border bg-white shadow-sm">[m
+[31m-            <div className="relative h-80 w-full md:h-105">[m
+[31m-              <Image[m
+[31m-                src={post.image}[m
+[31m-                alt={post.title}[m
+[31m-                fill[m
+[31m-                className="object-cover"[m
+[31m-              />[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <div className="p-8 md:p-10">[m
+[31m-              <div className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-foreground">[m
+[31m-                {post.category}[m
+[31m-              </div>[m
+[31m-[m
+[31m-              <h1 className="mt-5 text-4xl font-extrabold leading-tight text-foreground">[m
+[31m-                {post.title}[m
+[31m-              </h1>[m
+[31m-[m
+[31m-              <div className="mt-4 flex items-center gap-3 text-sm text-muted-foreground">[m
+[31m-                <CalendarDays className="size-4" />[m
+[31m-                <span>{post.date}</span>[m
+[31m-              </div>[m
+[31m-[m
+[31m-              <p className="mt-6 text-lg leading-8 text-muted-foreground">[m
+[31m-                {post.excerpt}[m
+[31m-              </p>[m
+[31m-[m
+[31m-              <div className="mt-8 space-y-6 text-base leading-8 text-foreground/90">[m
+[31m-                {post.content.map((paragraph) => ([m
+[31m-                  <p key={paragraph}>{paragraph}</p>[m
+[31m-                ))}[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-          </article>[m
+[31m-        </div>[m
+[31m-      </section>[m
+[31m-    </main>[m
+[31m-  );[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/blog/page.tsx b/app/blog/page.tsx[m
+[1mdeleted file mode 100755[m
+[1mindex 2d7d5aa..0000000[m
+[1m--- a/app/blog/page.tsx[m
+[1m+++ /dev/null[m
+[36m@@ -1,239 +0,0 @@[m
+[31m-import Image from "next/image";[m
+[31m-import Link from "next/link";[m
+[31m-import { ArrowRight, CalendarDays, Stethoscope } from "lucide-react";[m
+[31m-[m
+[31m-import { SiteFooter } from "@/components/sections/site-footer";[m
+[31m-import { SiteHeader } from "@/components/sections/site-header";[m
+[31m-import { Button } from "@/components/ui/button";[m
+[31m-[m
+[31m-const posts = [[m
+[31m-  {[m
+[31m-    title: "Quando escutar com calma muda todo o tratamento",[m
+[31m-    excerpt:[m
+[31m-      "Uma jornada de investigação cuidadosa em uma criança com dor abdominal recorrente, mostrando como atenção aos detalhes pode transformar o cuidado.",[m
+[31m-    slug: "quando-escutar-com-calma-muda-o-tratamento",[m
+[31m-    image: "/images/story-1.png",[m
+[31m-    category: "Consulta",[m
+[31m-    date: "08 mar 2026",[m
+[31m-    readTime: "4 min de leitura",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Pequenos sinais, grandes respostas",[m
+[31m-    excerpt:[m
+[31m-      "Um caso que reforça a importância de avaliar sintomas persistentes com sensibilidade, clareza e acompanhamento próximo da família.",[m
+[31m-    slug: "pequenos-sinais-grandes-respostas",[m
+[31m-    image: "/images/story-2.png",[m
+[31m-    category: "Gastropediatria",[m
+[31m-    date: "06 mar 2026",[m
+[31m-    readTime: "5 min de leitura",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Cuidar também é orientar a família",[m
+[31m-    excerpt:[m
+[31m-      "Uma história sobre acolhimento, explicação clara e construção de confiança durante o processo de diagnóstico e tratamento.",[m
+[31m-    slug: "cuidar-tambem-e-orientar-a-familia",[m
+[31m-    image: "/images/story-3.png",[m
+[31m-    category: "Acompanhamento",[m
+[31m-    date: "04 mar 2026",[m
+[31m-    readTime: "4 min de leitura",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "A importância de observar sintomas persistentes",[m
+[31m-    excerpt:[m
+[31m-      "Nem todo desconforto gastrointestinal é passageiro. Entender a duração, intensidade e frequência dos sintomas faz toda a diferença.",[m
+[31m-    slug: "a-importancia-de-observar-sintomas-persistentes",[m
+[31m-    image: "/images/story-1.png",[m
+[31m-    category: "Orientação",[m
+[31m-    date: "02 mar 2026",[m
+[31m-    readTime: "3 min de leitura",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Como a escuta da família ajuda no diagnóstico",[m
+[31m-    excerpt:[m
+[31m-      "O acompanhamento cuidadoso dos relatos dos responsáveis pode revelar padrões importantes e acelerar o caminho até a resposta correta.",[m
+[31m-    slug: "como-a-escuta-da-familia-ajuda-no-diagnostico",[m
+[31m-    image: "/images/story-2.png",[m
+[31m-    category: "Família",[m
+[31m-    date: "28 fev 2026",[m
+[31m-    readTime: "4 min de leitura",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Acolhimento, clareza e confiança no consultório",[m
+[31m-    excerpt:[m
+[31m-      "Explicar com calma cada etapa da investigação e do tratamento é parte essencial de um cuidado realmente humanizado.",[m
+[31m-    slug: "acolhimento-clareza-e-confianca-no-consultorio",[m
+[31m-    image: "/images/story-3.png",[m
+[31m-    category: "Cuidado",[m
+[31m-    date: "25 fev 2026",[m
+[31m-    readTime: "3 min de leitura",[m
+[31m-  },[m
+[31m-];[m
+[31m-[m
+[31m-const featuredPost = posts[0];[m
+[31m-const latestPosts = posts.slice(1);[m
+[31m-[m
+[31m-export default function BlogPage() {[m
+[31m-  return ([m
+[31m-    <>[m
+[31m-      <SiteHeader />[m
+[31m-[m
+[31m-      <main className="bg-background">[m
+[31m-        <section className="section-spacing border-b border-border/60 bg-[linear-gradient(180deg,#f8fbfc_0%,#eef7fa_100%)]">[m
+[31m-          <div className="container-shell">[m
+[31m-            <div className="mx-auto max-w-3xl text-center">[m
+[31m-              <p className="text-sm font-bold uppercase tracking-[0.3em] text-primary">[m
+[31m-                Blog[m
+[31m-              </p>[m
+[31m-[m
+[31m-              <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl">[m
+[31m-                Histórias, orientações e conteúdo sobre cuidado digestivo[m
+[31m-              </h1>[m
+[31m-[m
+[31m-              <p className="mt-5 text-lg leading-8 text-muted-foreground">[m
+[31m-                Um espaço para compartilhar experiências de cuidado, informação[m
+[31m-                de qualidade e conteúdos que aproximam famílias de um atendimento[m
+[31m-                mais humano e especializado.[m
+[31m-              </p>[m
+[31m-[m
+[31m-              <div className="mt-8 flex justify-center">[m
+[31m-                <Button asChild className="rounded-full px-6">[m
+[31m-                  <Link href="#artigos">Explorar artigos</Link>[m
+[31m-                </Button>[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </section>[m
+[31m-[m
+[31m-        <section className="section-spacing">[m
+[31m-          <div className="container-shell">[m
+[31m-            <div className="mb-8 flex items-center gap-3">[m
+[31m-              <div className="rounded-2xl bg-secondary p-3">[m
+[31m-                <Stethoscope className="size-5 text-primary" />[m
+[31m-              </div>[m
+[31m-              <div>[m
+[31m-                <p className="text-sm font-bold uppercase tracking-[0.2em] text-primary">[m
+[31m-                  Destaque[m
+[31m-                </p>[m
+[31m-                <h2 className="text-2xl font-extrabold text-foreground">[m
+[31m-                  História em destaque[m
+[31m-                </h2>[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <article className="overflow-hidden rounded-4xl border bg-white shadow-sm">[m
+[31m-              <div className="grid lg:grid-cols-[1.1fr_0.9fr]">[m
+[31m-                <div className="relative min-h-80">[m
+[31m-                  <Image[m
+[31m-                    src={featuredPost.image}[m
+[31m-                    alt={featuredPost.title}[m
+[31m-                    fill[m
+[31m-                    className="object-cover"[m
+[31m-                  />[m
+[31m-                </div>[m
+[31m-[m
+[31m-                <div className="flex flex-col justify-center p-8 md:p-10">[m
+[31m-                  <div className="inline-flex w-fit rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-foreground">[m
+[31m-                    {featuredPost.category}[m
+[31m-                  </div>[m
+[31m-[m
+[31m-                  <h3 className="mt-5 text-3xl font-extrabold leading-tight text-foreground">[m
+[31m-                    {featuredPost.title}[m
+[31m-                  </h3>[m
+[31m-[m
+[31m-                  <p className="mt-4 text-base leading-8 text-muted-foreground">[m
+[31m-                    {featuredPost.excerpt}[m
+[31m-                  </p>[m
+[31m-[m
+[31m-                  <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">[m
+[31m-                    <span className="inline-flex items-center gap-2">[m
+[31m-                      <CalendarDays className="size-4" />[m
+[31m-                      {featuredPost.date}[m
+[31m-                    </span>[m
+[31m-                    <span>{featuredPost.readTime}</span>[m
+[31m-                  </div>[m
+[31m-[m
+[31m-                  <div className="mt-8">[m
+[31m-                    <Link[m
+[31m-                      href={`/blog/${featuredPost.slug}`}[m
+[31m-                      className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:gap-3"[m
+[31m-                    >[m
+[31m-                      Ler artigo completo[m
+[31m-                      <ArrowRight className="size-4" />[m
+[31m-                    </Link>[m
+[31m-                  </div>[m
+[31m-                </div>[m
+[31m-              </div>[m
+[31m-            </article>[m
+[31m-          </div>[m
+[31m-        </section>[m
+[31m-[m
+[31m-        <section id="artigos" className="pb-20">[m
+[31m-          <div className="container-shell">[m
+[31m-            <div className="mb-10 flex items-end justify-between gap-4">[m
+[31m-              <div>[m
+[31m-                <p className="text-sm font-bold uppercase tracking-[0.3em] text-primary">[m
+[31m-                  Artigos recentes[m
+[31m-                </p>[m
+[31m-                <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-foreground">[m
+[31m-                  Conteúdo para informar e acolher[m
+[31m-                </h2>[m
+[31m-              </div>[m
+[31m-            </div>[m
+[31m-[m
+[31m-            <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">[m
+[31m-              {latestPosts.map((post) => ([m
+[31m-                <article[m
+[31m-                  key={post.slug}[m
+[31m-                  className="group overflow-hidden rounded-[28px] border bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"[m
+[31m-                >[m
+[31m-                  <div className="relative h-60 overflow-hidden">[m
+[31m-                    <Image[m
+[31m-                      src={post.image}[m
+[31m-                      alt={post.title}[m
+[31m-                      fill[m
+[31m-                      className="object-cover transition duration-500 group-hover:scale-105"[m
+[31m-                    />[m
+[31m-                  </div>[m
+[31m-[m
+[31m-                  <div className="p-6">[m
+[31m-                    <div className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-foreground">[m
+[31m-                      {post.category}[m
+[31m-                    </div>[m
+[31m-[m
+[31m-                    <h3 className="mt-4 text-xl font-bold leading-snug text-foreground">[m
+[31m-                      {post.title}[m
+[31m-                    </h3>[m
+[31m-[m
+[31m-                    <p className="mt-3 text-sm leading-7 text-muted-foreground">[m
+[31m-                      {post.excerpt}[m
+[31m-                    </p>[m
+[31m-[m
+[31m-                    <div className="mt-5 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">[m
+[31m-                      <span className="inline-flex items-center gap-2">[m
+[31m-                        <CalendarDays className="size-4" />[m
+[31m-                        {post.date}[m
+[31m-                      </span>[m
+[31m-                      <span>{post.readTime}</span>[m
+[31m-                    </div>[m
+[31m-[m
+[31m-                    <div className="mt-6">[m
+[31m-                      <Link[m
+[31m-                        href={`/blog/${post.slug}`}[m
+[31m-                        className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:gap-3"[m
+[31m-                      >[m
+[31m-                        Ler mais[m
+[31m-                        <ArrowRight className="size-4" />[m
+[31m-                      </Link>[m
+[31m-                    </div>[m
+[31m-                  </div>[m
+[31m-                </article>[m
+[31m-              ))}[m
+[31m-            </div>[m
+[31m-          </div>[m
+[31m-        </section>[m
+[31m-      </main>[m
+[31m-[m
+[31m-      <SiteFooter />[m
+[31m-    </>[m
+[31m-  );[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/app/page.tsx b/app/page.tsx[m
+[1mindex ec634d7..a3aa87c 100755[m
+[1m--- a/app/page.tsx[m
+[1m+++ b/app/page.tsx[m
+[36m@@ -6,7 +6,6 @@[m [mimport { HeroSection } from "@/components/sections/hero-section";[m
+ import { ServicesSection } from "@/components/sections/services-section";[m
+ import { SiteHeader } from "@/components/sections/site-header";[m
+ import { SiteFooter } from "@/components/sections/site-footer";[m
+[31m-import { StoryCardsSection } from "@/components/sections/story-cards-section";[m
+ [m
+ export default function HomePage() {[m
+   return ([m
+[36m@@ -16,7 +15,6 @@[m [mexport default function HomePage() {[m
+       <AboutSection />[m
+       <ServicesSection />[m
+       <ExamsSection />[m
+[31m-      <StoryCardsSection />[m
+       <ContactSection />[m
+       <SiteFooter />[m
+       <FloatingWhatsapp />[m
+[1mdiff --git a/components/sections/site-header.tsx b/components/sections/site-header.tsx[m
+[1mindex a8b788d..a9751a9 100755[m
+[1m--- a/components/sections/site-header.tsx[m
+[1m+++ b/components/sections/site-header.tsx[m
+[36m@@ -44,23 +44,15 @@[m [mexport function SiteHeader() {[m
+           </Link>[m
+ [m
+           <nav className="hidden items-center gap-7 lg:flex">[m
+[31m-            {navLinks.map((item) => {[m
+[31m-              const isBlog = item.href === "/blog";[m
+[31m-[m
+[31m-              return ([m
+[31m-                <Link[m
+[31m-                  key={item.href}[m
+[31m-                  href={item.href}[m
+[31m-                  className={`text-sm font-semibold transition ${[m
+[31m-                    isBlog[m
+[31m-                      ? "rounded-full bg-secondary px-4 py-2 text-secondary-foreground hover:bg-secondary/80"[m
+[31m-                      : "text-foreground/85 hover:text-primary"[m
+[31m-                  }`}[m
+[31m-                >[m
+[31m-                  {item.label}[m
+[31m-                </Link>[m
+[31m-              );[m
+[31m-            })}[m
+[32m+[m[32m            {navLinks.map((item) => ([m
+[32m+[m[32m              <Link[m
+[32m+[m[32m                key={item.href}[m
+[32m+[m[32m                href={item.href}[m
+[32m+[m[32m                className="text-sm font-semibold text-foreground/85 transition hover:text-primary"[m
+[32m+[m[32m              >[m
+[32m+[m[32m                {item.label}[m
+[32m+[m[32m              </Link>[m
+[32m+[m[32m            ))}[m
+           </nav>[m
+ [m
+           <div className="hidden items-center gap-3 md:flex">[m
+[1mdiff --git a/components/sections/story-cards-section.tsx b/components/sections/story-cards-section.tsx[m
+[1mdeleted file mode 100755[m
+[1mindex c65dbd9..0000000[m
+[1m--- a/components/sections/story-cards-section.tsx[m
+[1m+++ /dev/null[m
+[36m@@ -1,110 +0,0 @@[m
+[31m-"use client";[m
+[31m-[m
+[31m-import Image from "next/image";[m
+[31m-import Link from "next/link";[m
+[31m-import { motion } from "framer-motion";[m
+[31m-import { ArrowRight } from "lucide-react";[m
+[31m-[m
+[31m-const stories = [[m
+[31m-  {[m
+[31m-    title: "Quando escutar com calma muda todo o tratamento",[m
+[31m-    excerpt:[m
+[31m-      "Uma jornada de investigação cuidadosa em uma criança com dor abdominal recorrente, mostrando como atenção aos detalhes pode transformar o cuidado.",[m
+[31m-    image: "/images/story-1.png",[m
+[31m-    category: "Consulta",[m
+[31m-    slug: "quando-escutar-com-calma-muda-o-tratamento",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Pequenos sinais, grandes respostas",[m
+[31m-    excerpt:[m
+[31m-      "Um caso que reforça a importância de avaliar sintomas persistentes com sensibilidade, clareza e acompanhamento próximo da família.",[m
+[31m-    image: "/images/story-2.png",[m
+[31m-    category: "Gastropediatria",[m
+[31m-    slug: "pequenos-sinais-grandes-respostas",[m
+[31m-  },[m
+[31m-  {[m
+[31m-    title: "Cuidar também é orientar a família",[m
+[31m-    excerpt:[m
+[31m-      "Uma história sobre acolhimento, explicação clara e construção de confiança durante o processo de diagnóstico e tratamento.",[m
+[31m-    image: "/images/story-3.png",[m
+[31m-    category: "Acompanhamento",[m
+[31m-    slug: "cuidar-tambem-e-orientar-a-familia",[m
+[31m-  },[m
+[31m-];[m
+[31m-[m
+[31m-export function StoryCardsSection() {[m
+[31m-  return ([m
+[31m-    <section className="section-spacing bg-background">[m
+[31m-      <div className="container-shell">[m
+[31m-        <div className="mx-auto max-w-3xl text-center">[m
+[31m-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-primary">[m
+[31m-            Histórias de cuidado[m
+[31m-          </p>[m
+[31m-          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">[m
+[31m-            Experiências reais que refletem acolhimento, atenção e confiança[m
+[31m-          </h2>[m
+[31m-          <p className="mt-4 text-lg leading-8 text-muted-foreground">[m
+[31m-            Relatos inspirados em vivências do consultório, mostrando a[m
+[31m-            importância de um cuidado humano e individualizado.[m
+[31m-          </p>[m
+[31m-        </div>[m
+[31m-[m
+[31m-        <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">[m
+[31m-          {stories.map((story, index) => ([m
+[31m-            <motion.article[m
+[31m-              key={story.slug}[m
+[31m-              initial={{ opacity: 0, y: 24 }}[m
+[31m-              whileInView={{ opacity: 1, y: 0 }}[m
+[31m-              viewport={{ once: true, amount: 0.25 }}[m
+[31m-              transition={{ duration: 0.45, delay: index * 0.08 }}[m
+[31m-              className="group overflow-hidden rounded-[32px] border bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"[m
+[31m-            >[m
+[31m-              <div className="relative h-[260px] overflow-hidden">[m
+[31m-                <Image[m
+[31m-                  src={story.image}[m
+[31m-                  alt={story.title}[m
+[31m-                  fill[m
+[31m-                  className="object-cover transition duration-500 group-hover:scale-105"[m
+[31m-                />[m
+[31m-              </div>[m
+[31m-[m
+[31m-              <div className="p-6">[m
+[31m-                <div className="inline-flex rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-secondary-foreground">[m
+[31m-                  {story.category}[m
+[31m-                </div>[m
+[31m-[m
+[31m-                <h3 className="mt-4 text-xl font-bold leading-snug text-foreground">[m
+[31m-                  {story.title}[m
+[31m-                </h3>[m
+[31m-[m
+[31m-                <p className="mt-3 line-clamp-3 text-sm leading-7 text-muted-foreground">[m
+[31m-                  {story.excerpt}[m
+[31m-                </p>[m
+[31m-[m
+[31m-                <div className="mt-6">[m
+[31m-                  <Link[m
+[31m-                    href={`/blog/${story.slug}`}[m
+[31m-                    className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition hover:gap-3"[m
+[31m-                  >[m
+[31m-                    Ler história completa[m
+[31m-                    <ArrowRight className="size-4" />[m
+[31m-                  </Link>[m
+[31m-                </div>[m
+[31m-              </div>[m
+[31m-            </motion.article>[m
+[31m-          ))}[m
+[31m-        </div>[m
+[31m-[m
+[31m-        <div className="mt-12 flex justify-center">[m
+[31m-          <Link[m
+[31m-            href="/blog"[m
+[31m-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"[m
+[31m-          >[m
+[31m-            Ver todas as histórias[m
+[31m-            <ArrowRight className="size-4" />[m
+[31m-          </Link>[m
+[31m-        </div>[m
+[31m-      </div>[m
+[31m-    </section>[m
+[31m-  );[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/lib/data.ts b/lib/data.ts[m
+[1mindex c6f33ae..71101d1 100755[m
+[1m--- a/lib/data.ts[m
+[1m+++ b/lib/data.ts[m
+[36m@@ -12,7 +12,6 @@[m [mexport const navLinks = [[m
+   { label: "Quem sou", href: "#quem-sou" },[m
+   { label: "Consultas", href: "#consultas" },[m
+   { label: "Exames", href: "#exames" },[m
+[31m-  { label: "Blog", href: "/blog" },[m
+   { label: "Contato", href: "#contato" },[m
+ ];[m
+ [m

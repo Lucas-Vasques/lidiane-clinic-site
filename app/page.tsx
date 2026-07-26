@@ -6,7 +6,6 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { ServicesSection } from "@/components/sections/services-section";
 import { SiteHeader } from "@/components/sections/site-header";
 import { SiteFooter } from "@/components/sections/site-footer";
-import { StoryCardsSection } from "@/components/sections/story-cards-section";
 
 export default function HomePage() {
   return (
@@ -16,7 +15,6 @@ export default function HomePage() {
       <AboutSection />
       <ServicesSection />
       <ExamsSection />
-      <StoryCardsSection />
       <ContactSection />
       <SiteFooter />
       <FloatingWhatsapp />
