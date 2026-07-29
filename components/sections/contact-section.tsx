@@ -127,7 +127,7 @@ export function ContactSection() {
     {officeImages.map((src, index) => (
       <div
         key={src}
-        className="group relative aspect-4/3 overflow-hidden rounded-[30px] border border-white/15 bg-white/10 shadow-[0_25px_60px_-25px_rgba(0,0,0,0.4)] backdrop-blur-md"
+        className="group relative aspect-[15/8] overflow-hidden rounded-[30px] border border-white/15 bg-white/10 shadow-[0_25px_60px_-25px_rgba(0,0,0,0.4)] backdrop-blur-md"
       >
         <Image
           src={src}

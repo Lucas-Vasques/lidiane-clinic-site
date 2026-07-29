@@ -41,7 +41,7 @@ export function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="existing-classes w-full sm:w-auto"
+              className="existing-classes min-h-11 w-full sm:w-auto"
             >
               <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
                 <MessageCircle className="mr-2 size-5" />
@@ -53,7 +53,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="existing-classes w-full sm:w-auto"
+              className="existing-classes min-h-11 w-full sm:w-auto"
             >
               <Link href="#consultas">Ver áreas de atuação</Link>
             </Button>

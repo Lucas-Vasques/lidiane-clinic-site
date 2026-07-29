@@ -7,6 +7,7 @@ import { Menu, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -64,7 +65,7 @@ export function SiteHeader() {
           <div className="hidden items-center gap-3 md:flex">
             <Button
               asChild
-              className="rounded-full px-5 shadow-lg shadow-primary/20"
+              className="min-h-11 rounded-full px-5 shadow-lg shadow-primary/20"
             >
               <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
                 <MessageCircle className="mr-2 size-4" />
@@ -78,7 +79,7 @@ export function SiteHeader() {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full lg:hidden"
+                className="size-11 rounded-full lg:hidden"
                 aria-label="Abrir menu"
               >
                 <Menu className="size-5" />
@@ -105,18 +106,19 @@ export function SiteHeader() {
 
               <div className="mt-8 flex flex-col gap-3">
                 {navLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="rounded-2xl px-3 py-3 text-base font-semibold text-foreground transition hover:bg-muted hover:text-primary"
-                  >
-                    {item.label}
-                  </Link>
+                  <SheetClose asChild key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="rounded-2xl px-3 py-3 text-base font-semibold text-foreground transition hover:bg-muted hover:text-primary"
+                    >
+                      {item.label}
+                    </Link>
+                  </SheetClose>
                 ))}
               </div>
 
               <div className="mt-8 border-t border-border pt-6">
-                <Button asChild className="w-full rounded-full">
+                <Button asChild className="min-h-11 w-full rounded-full">
                   <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
                     <MessageCircle className="mr-2 size-4" />
                     Agendar consulta

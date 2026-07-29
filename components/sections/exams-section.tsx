@@ -52,7 +52,7 @@ export function ExamsSection() {
             </div>
           </div>
 
-          <Button asChild size="lg" className="rounded-full bg-[#f28a1a] px-8 text-base text-white hover:bg-[#db7a12]">
+          <Button asChild size="lg" className="min-h-11 rounded-full bg-[#f28a1a] px-8 text-base text-white hover:bg-[#db7a12]">
             <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
               <MessageCircle className="mr-2 size-5" />
               Agende sua consulta

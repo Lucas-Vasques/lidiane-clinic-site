@@ -47,7 +47,7 @@ export function SiteFooter() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-white/85 transition hover:text-white"
+                  className="flex text-sm text-white/85 transition hover:text-white max-md:min-h-11 max-md:items-center"
                 >
                   {link.label}
                 </Link>
@@ -64,7 +64,7 @@ export function SiteFooter() {
               <Link
                 href={WHATSAPP_APPOINTMENT_URL}
                 target="_blank"
-                className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
+                className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white max-md:min-h-11"
               >
                 <MessageCircle className="size-4" />
                 <span>(85) 99215-7396</span>
@@ -73,7 +73,7 @@ export function SiteFooter() {
               <Link
                 href="https://www.instagram.com/lidianegastropediatra?igsh=MTR4ZzhtNm8xN2NoYQ%3D%3D&utm_source=qr"
                 target="_blank"
-                className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
+                className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white max-md:min-h-11"
               >
                 <Instagram className="size-4" />
                 <span>Instagram profissional</span>
