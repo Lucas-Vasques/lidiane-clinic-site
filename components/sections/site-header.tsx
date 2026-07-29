@@ -18,29 +18,35 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-2xl">
       <div className="container-shell">
-        <div className="flex h-20 items-center justify-between gap-4">
+        <div className="flex h-20 items-center justify-between gap-3">
           <Link
             href="/"
-            className="flex min-w-0 items-center gap-3 transition-opacity hover:opacity-95"
+            className="flex min-w-0 items-center gap-2.5 transition-opacity hover:opacity-95 sm:block"
           >
-            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-border/60 bg-white shadow-sm">
-              <Image
-                src="/images/Logo-icon 1.png"
-                alt="Logo Dra. Lidiane Landim"
-                fill
-                className="object-contain p-1"
-                priority
-              />
-            </div>
-
-            <div className="min-w-0">
-              <p className="truncate font-heading text-lg font-extrabold leading-none text-primary sm:text-xl">
-                Dra. <span className="text-accent">Lidiane</span> Landim
-              </p>
-              <p className="mt-1 truncate text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground sm:text-xs">
+            <Image
+              src="/brand/lidiane-logo-horizontal.png"
+              alt=""
+              width={989}
+              height={246}
+              className="hidden h-14 w-auto max-w-[225px] object-contain sm:block xl:max-w-[245px]"
+              priority
+            />
+            <Image
+              src="/brand/lidiane-logo-symbol.png"
+              alt=""
+              width={262}
+              height={283}
+              className="h-11 w-auto shrink-0 object-contain sm:hidden"
+              priority
+            />
+            <span className="min-w-0 sm:sr-only">
+              <span className="block truncate text-sm font-bold leading-tight">
+                Dra. Lidiane Landim
+              </span>
+              <span className="hidden truncate text-[10px] leading-tight text-muted-foreground min-[390px]:block">
                 Gastropediatria e Endoscopia Digestiva
-              </p>
-            </div>
+              </span>
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
@@ -84,24 +90,17 @@ export function SiteHeader() {
                 <SheetTitle>Menu de navegação</SheetTitle>
               </SheetHeader>
 
-              <div className="mt-8 flex items-center gap-3 border-b border-border pb-6">
-                <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-border/60 bg-white shadow-sm">
-                  <Image
-                    src="/images/Logo-icon 1.png"
-                    alt="Logo Dra. Lidiane Landim"
-                    fill
-                    className="object-contain p-1"
-                  />
-                </div>
-
-                <div>
-                  <p className="font-heading text-lg font-extrabold leading-none text-primary">
-                    Dra. <span className="text-accent">Lidiane</span> Landim
-                  </p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
-                    Gastropediatria
-                  </p>
-                </div>
+              <div className="mt-8 border-b border-border pb-6">
+                <Image
+                  src="/brand/lidiane-logo-horizontal.png"
+                  alt=""
+                  width={989}
+                  height={246}
+                  className="h-auto w-full max-w-[260px] object-contain"
+                />
+                <span className="sr-only">
+                  Dra. Lidiane Landim — Gastropediatria
+                </span>
               </div>
 
               <div className="mt-8 flex flex-col gap-3">

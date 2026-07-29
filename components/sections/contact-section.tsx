@@ -16,9 +16,9 @@ export function ContactSection() {
   return (
     <section
       id="contato"
-      className="section-spacing relative overflow-hidden bg-[linear-gradient(135deg,#17789b_0%,#0f5e7b_100%)] text-white"
+      className="section-spacing relative overflow-hidden bg-[linear-gradient(135deg,#858760_0%,#686a49_100%)] text-white"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_22%),radial-gradient(circle_at_bottom_right,rgba(139,195,74,0.12),transparent_28%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_22%),radial-gradient(circle_at_bottom_right,rgba(220,128,93,0.18),transparent_28%)]" />
       <div className="container-shell relative z-10">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <motion.div

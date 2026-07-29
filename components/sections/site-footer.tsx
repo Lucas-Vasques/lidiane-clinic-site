@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 
 const footerLinks = [
@@ -11,18 +12,22 @@ const footerLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[#0b4f67] text-white">
+    <footer className="border-t border-white/10 bg-[#454531] text-white">
       <div className="container-shell py-12">
         <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
           <div className="space-y-4">
-            <div>
-              <p className="font-heading text-2xl font-extrabold leading-none">
-                DRA. <span className="text-[#8bc34a]">LIDIANE</span> LANDIM
-              </p>
-              <p className="mt-2 text-sm text-white/70">
-                Gastropediatria e Endoscopia Digestiva
-              </p>
+            <div className="w-full max-w-[310px] rounded-xl border border-border bg-[#fffaf4] px-4 py-2.5">
+              <Image
+                src="/brand/lidiane-logo-horizontal.png"
+                alt=""
+                width={957}
+                height={214}
+                className="h-auto w-full object-contain"
+              />
             </div>
+            <span className="sr-only">
+              DRA. LIDIANE LANDIM — Gastropediatria e Endoscopia Digestiva
+            </span>
 
             <p className="max-w-sm text-sm leading-7 text-white/75">
               Atendimento humanizado e especializado para crianças, adultos e

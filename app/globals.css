@@ -3,80 +3,80 @@
 @import "shadcn/tailwind.css";
 
 :root {
-  --background: #f8fbfc;
-  --foreground: #14323d;
+  --background: #fffaf4;
+  --foreground: #454431;
 
   --card: #ffffff;
-  --card-foreground: #14323d;
+  --card-foreground: #454431;
 
   --popover: #ffffff;
-  --popover-foreground: #14323d;
+  --popover-foreground: #454431;
 
-  --primary: #17789b;
+  --primary: #858760;
   --primary-foreground: #ffffff;
 
-  --secondary: #dceef2;
-  --secondary-foreground: #0f5e7b;
+  --secondary: #f4eadc;
+  --secondary-foreground: #686a49;
 
-  --muted: #eef5f7;
-  --muted-foreground: #5e7680;
+  --muted: #f6eee4;
+  --muted-foreground: #716f60;
 
-  --accent: #8bc34a;
-  --accent-foreground: #13311a;
+  --accent: #dc805d;
+  --accent-foreground: #51291c;
 
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
 
-  --border: rgba(20, 50, 61, 0.1);
-  --input: rgba(20, 50, 61, 0.12);
-  --ring: #17789b;
+  --border: rgba(69, 68, 49, 0.12);
+  --input: rgba(69, 68, 49, 0.14);
+  --ring: #858760;
 
-  --chart-1: #17789b;
-  --chart-2: #8bc34a;
-  --chart-3: #f28a1a;
-  --chart-4: #0f5e7b;
-  --chart-5: #dceef2;
+  --chart-1: #858760;
+  --chart-2: #dc805d;
+  --chart-3: #b4b68d;
+  --chart-4: #686a49;
+  --chart-5: #f4eadc;
 
   --radius: 1.25rem;
 
   --sidebar: #ffffff;
-  --sidebar-foreground: #14323d;
-  --sidebar-primary: #17789b;
+  --sidebar-foreground: #454431;
+  --sidebar-primary: #858760;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #eef5f7;
-  --sidebar-accent-foreground: #14323d;
-  --sidebar-border: rgba(20, 50, 61, 0.1);
-  --sidebar-ring: #17789b;
+  --sidebar-accent: #f6eee4;
+  --sidebar-accent-foreground: #454431;
+  --sidebar-border: rgba(69, 68, 49, 0.12);
+  --sidebar-ring: #858760;
 }
 
 .dark {
-  --background: #0d1d24;
-  --foreground: #eef7fa;
-  --card: #10242c;
-  --card-foreground: #eef7fa;
-  --popover: #10242c;
-  --popover-foreground: #eef7fa;
-  --primary: #52a9c8;
-  --primary-foreground: #08212b;
-  --secondary: #14323d;
-  --secondary-foreground: #dceef2;
-  --muted: #14323d;
-  --muted-foreground: #a5c0c9;
-  --accent: #9cd35e;
-  --accent-foreground: #112814;
+  --background: #29291f;
+  --foreground: #fffaf4;
+  --card: #343426;
+  --card-foreground: #fffaf4;
+  --popover: #343426;
+  --popover-foreground: #fffaf4;
+  --primary: #b4b68d;
+  --primary-foreground: #29291f;
+  --secondary: #454531;
+  --secondary-foreground: #f4eadc;
+  --muted: #454531;
+  --muted-foreground: #cbc7b8;
+  --accent: #e59677;
+  --accent-foreground: #321b13;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
   --border: rgba(255, 255, 255, 0.08);
   --input: rgba(255, 255, 255, 0.1);
-  --ring: #52a9c8;
-  --sidebar: #10242c;
-  --sidebar-foreground: #eef7fa;
-  --sidebar-primary: #52a9c8;
-  --sidebar-primary-foreground: #08212b;
-  --sidebar-accent: #14323d;
-  --sidebar-accent-foreground: #eef7fa;
+  --ring: #b4b68d;
+  --sidebar: #343426;
+  --sidebar-foreground: #fffaf4;
+  --sidebar-primary: #b4b68d;
+  --sidebar-primary-foreground: #29291f;
+  --sidebar-accent: #454531;
+  --sidebar-accent-foreground: #fffaf4;
   --sidebar-border: rgba(255, 255, 255, 0.08);
-  --sidebar-ring: #52a9c8;
+  --sidebar-ring: #b4b68d;
 }
 
 @layer theme {
@@ -163,12 +163,12 @@ h4 {
   border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 20px 60px -20px rgba(23, 120, 155, 0.25);
+  box-shadow: 0 20px 60px -20px rgba(133, 135, 96, 0.25);
   backdrop-filter: blur(12px);
 }
 
 .hero-grid {
   background-image:
-    radial-gradient(circle at top left, rgba(139, 195, 74, 0.12), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(23, 120, 155, 0.12), transparent 32%);
+    radial-gradient(circle at top left, rgba(220, 128, 93, 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(133, 135, 96, 0.12), transparent 32%);
 }

@@ -6,7 +6,7 @@ export function FloatingWhatsapp() {
     <Link
       href="https://wa.me/message/CDM4GY5YCUKUA1"
       target="_blank"
-      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-[0_12px_30px_-8px_rgba(139,195,74,0.55)] transition hover:scale-105"
+      className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-white shadow-[0_12px_30px_-8px_rgba(37,211,102,0.6)] transition hover:scale-105 hover:bg-[#1fba59] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#25d366]"
       aria-label="Abrir WhatsApp"
     >
       <MessageCircle className="size-6" />

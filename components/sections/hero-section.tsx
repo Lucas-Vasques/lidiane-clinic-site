@@ -99,7 +99,7 @@ export function HeroSection() {
         >
           <div className="absolute inset-0 -z-10 rounded-[36px] bg-linear-to-br from-secondary via-white to-accent/15 blur-2xl" />
 
-          <div className="relative mx-auto max-w-140 overflow-hidden rounded-[36px] border border-white/60 bg-white shadow-[0_30px_80px_-25px_rgba(23,120,155,0.35)]">
+          <div className="relative mx-auto max-w-140 overflow-hidden rounded-[36px] border border-white/60 bg-white shadow-[0_30px_80px_-25px_rgba(133,135,96,0.35)]">
 <Image
   src="/images/Main.png"
   alt="Dra. Lidiane Landim"
