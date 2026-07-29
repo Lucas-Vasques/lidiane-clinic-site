@@ -51,6 +51,7 @@ export const services = [
 export const performedExams = [
   "Endoscopia digestiva alta",
   "Colonoscopia",
+  "Teste respiratório",
 ];
 
 export const investigatedConditions = [
