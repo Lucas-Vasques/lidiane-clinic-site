@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/data";
+
 const footerLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Quem sou", href: "#quem-sou" },
@@ -60,7 +62,7 @@ export function SiteFooter() {
 
             <div className="space-y-3">
               <Link
-                href="https://wa.me/message/CDM4GY5YCUKUA1"
+                href={WHATSAPP_APPOINTMENT_URL}
                 target="_blank"
                 className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white"
               >

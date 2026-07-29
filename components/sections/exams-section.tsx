@@ -4,7 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { investigatedConditions, performedExams } from "@/lib/data";
+import {
+  investigatedConditions,
+  performedExams,
+  WHATSAPP_APPOINTMENT_URL,
+} from "@/lib/data";
 import { CheckCircle2, MessageCircle } from "lucide-react";
 
 export function ExamsSection() {
@@ -49,7 +53,7 @@ export function ExamsSection() {
           </div>
 
           <Button asChild size="lg" className="rounded-full bg-[#f28a1a] px-8 text-base text-white hover:bg-[#db7a12]">
-            <Link href="https://wa.me/message/CDM4GY5YCUKUA1" target="_blank">
+            <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
               <MessageCircle className="mr-2 size-5" />
               Agende sua consulta
             </Link>

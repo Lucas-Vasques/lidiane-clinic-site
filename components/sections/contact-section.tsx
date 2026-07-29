@@ -5,6 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Instagram, MapPin, MessageCircle } from "lucide-react";
 
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/data";
+
 const officeImages = [
   "/images/Clinic-1.png",
   "/images/Clinic-2.png",
@@ -46,7 +48,7 @@ export function ContactSection() {
 
             <div className="space-y-4">
               <Link
-                href="https://wa.me/message/CDM4GY5YCUKUA1"
+                href={WHATSAPP_APPOINTMENT_URL}
                 target="_blank"
                 className="group flex items-center gap-4 rounded-[28px] border border-white/15 bg-white/10 p-5 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.35)] backdrop-blur-md transition duration-300 hover:bg-white/15"
               >

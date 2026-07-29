@@ -7,6 +7,7 @@ import { MessageCircle, ShieldCheck, Stethoscope } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/data";
 
 export function HeroSection() {
   return (
@@ -42,7 +43,7 @@ export function HeroSection() {
               size="lg"
               className="existing-classes w-full sm:w-auto"
             >
-              <Link href="https://wa.me/message/CDM4GY5YCUKUA1" target="_blank">
+              <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
                 <MessageCircle className="mr-2 size-5" />
                 Agende sua consulta pelo WhatsApp
               </Link>

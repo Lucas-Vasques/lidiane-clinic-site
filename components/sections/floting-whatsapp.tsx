@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 
+import { WHATSAPP_APPOINTMENT_URL } from "@/lib/data";
+
 export function FloatingWhatsapp() {
   return (
     <Link
-      href="https://wa.me/message/CDM4GY5YCUKUA1"
+      href={WHATSAPP_APPOINTMENT_URL}
       target="_blank"
       className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25d366] text-white shadow-[0_12px_30px_-8px_rgba(37,211,102,0.6)] transition hover:scale-105 hover:bg-[#1fba59] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#25d366]"
       aria-label="Abrir WhatsApp"

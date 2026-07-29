@@ -12,7 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { navLinks } from "@/lib/data";
+import { navLinks, WHATSAPP_APPOINTMENT_URL } from "@/lib/data";
 
 export function SiteHeader() {
   return (
@@ -66,7 +66,7 @@ export function SiteHeader() {
               asChild
               className="rounded-full px-5 shadow-lg shadow-primary/20"
             >
-              <Link href="https://wa.me/message/CDM4GY5YCUKUA1" target="_blank">
+              <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
                 <MessageCircle className="mr-2 size-4" />
                 Agendar consulta
               </Link>
@@ -117,7 +117,7 @@ export function SiteHeader() {
 
               <div className="mt-8 border-t border-border pt-6">
                 <Button asChild className="w-full rounded-full">
-                  <Link href="https://wa.me/5585992157396" target="_blank">
+                  <Link href={WHATSAPP_APPOINTMENT_URL} target="_blank">
                     <MessageCircle className="mr-2 size-4" />
                     Agendar consulta
                   </Link>

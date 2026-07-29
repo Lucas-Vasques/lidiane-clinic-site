@@ -7,6 +7,9 @@ import {
   Microscope,
 } from "lucide-react";
 
+export const WHATSAPP_APPOINTMENT_URL =
+  "https://wa.me/message/CDM4GY5YCUKUA1";
+
 export const navLinks = [
   { label: "Início", href: "#inicio" },
   { label: "Quem sou", href: "#quem-sou" },
