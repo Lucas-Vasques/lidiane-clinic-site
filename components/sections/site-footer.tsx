@@ -14,11 +14,11 @@ const footerLinks = [
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[#454531] text-white">
+    <footer className="border-t border-border bg-background text-foreground">
       <div className="container-shell py-12">
         <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
           <div className="space-y-4">
-            <div className="w-full max-w-[310px] rounded-xl border border-border bg-[#fffaf4] px-4 py-2.5">
+            <div className="w-full max-w-[310px] rounded-xl bg-transparent px-4 py-2.5">
               <Image
                 src="/brand/lidiane-logo-horizontal.png"
                 alt=""
@@ -31,14 +31,14 @@ export function SiteFooter() {
               DRA. LIDIANE LANDIM — Gastropediatria e Endoscopia Digestiva
             </span>
 
-            <p className="max-w-sm text-sm leading-7 text-white/75">
+            <p className="max-w-sm text-sm leading-7 text-muted-foreground">
               Atendimento humanizado e especializado para crianças, adultos e
               famílias, com foco em saúde digestiva e acompanhamento seguro.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white/70">
+            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
               Navegação
             </h3>
 
@@ -47,7 +47,7 @@ export function SiteFooter() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="flex text-sm text-white/85 transition hover:text-white max-md:min-h-11 max-md:items-center"
+                  className="flex text-sm text-foreground transition hover:text-primary max-md:min-h-11 max-md:items-center"
                 >
                   {link.label}
                 </Link>
@@ -56,7 +56,7 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white/70">
+            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
               Contato
             </h3>
 
@@ -64,7 +64,7 @@ export function SiteFooter() {
               <Link
                 href={WHATSAPP_APPOINTMENT_URL}
                 target="_blank"
-                className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white max-md:min-h-11"
+                className="flex items-center gap-3 text-sm text-foreground transition hover:text-primary max-md:min-h-11"
               >
                 <MessageCircle className="size-4" />
                 <span>(85) 99215-7396</span>
@@ -73,7 +73,7 @@ export function SiteFooter() {
               <Link
                 href="https://www.instagram.com/lidianegastropediatra?igsh=MTR4ZzhtNm8xN2NoYQ%3D%3D&utm_source=qr"
                 target="_blank"
-                className="flex items-center gap-3 text-sm text-white/85 transition hover:text-white max-md:min-h-11"
+                className="flex items-center gap-3 text-sm text-foreground transition hover:text-primary max-md:min-h-11"
               >
                 <Instagram className="size-4" />
                 <span>Instagram profissional</span>
@@ -82,11 +82,11 @@ export function SiteFooter() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-white/70">
+            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-primary">
               Endereço
             </h3>
 
-            <div className="flex items-start gap-3 text-sm leading-7 text-white/85">
+            <div className="flex items-start gap-3 text-sm leading-7 text-foreground">
               <MapPin className="mt-1 size-4 shrink-0" />
               <div>
                 <p>Av. Santos Dumont, 1510 — Sala 409</p>
@@ -97,7 +97,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/65 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-3 border-t border-border pt-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>© 2026 Dra. Lidiane Landim. Todos os direitos reservados.</p>
           <p>RQE 10121/14075 | CREMEC 14396</p>
         </div>
