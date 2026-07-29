@@ -10,7 +10,7 @@ export function ServicesSection() {
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-primary">Consultas</p>
           <h2 className="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Cuidado completo em saúde digestiva
+            Consultas e áreas de atuação
           </h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
             Áreas de atuação organizadas de forma clara, com linguagem acolhedora e aparência mais premium.

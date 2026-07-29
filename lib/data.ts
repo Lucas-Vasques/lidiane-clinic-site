@@ -48,7 +48,12 @@ export const services = [
   },
 ];
 
-export const exams = [
+export const performedExams = [
+  "Endoscopia digestiva alta",
+  "Colonoscopia",
+];
+
+export const investigatedConditions = [
   "Refluxo gastroesofágico e esofagite eosinofílica",
   "Pólipos e alterações com potencial de evolução",
   "Gastrite, úlceras, polipose e atrofia gástrica",
