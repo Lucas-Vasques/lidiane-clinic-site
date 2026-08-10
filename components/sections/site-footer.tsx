@@ -89,9 +89,7 @@ export function SiteFooter() {
             <div className="flex items-start gap-3 text-sm leading-7 text-foreground">
               <MapPin className="mt-1 size-4 shrink-0" />
               <div>
-                <p>Av. Santos Dumont, 1510 — Sala 409</p>
-                <p>Edifício Manhattan Square Garden, Aldeota</p>
-                <p>Fortaleza / CE — CEP 60150-161</p>
+                <p>Clínica NeoNatus - Av Washington Soares, 3663 - WSTC, Sala 608</p>
               </div>
             </div>
           </div>

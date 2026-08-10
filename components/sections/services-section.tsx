@@ -13,7 +13,7 @@ export function ServicesSection() {
             Consultas e áreas de atuação
           </h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            Áreas de atuação organizadas de forma clara, com linguagem acolhedora e aparência mais premium.
+            Áreas de atuação organizadas de forma clara, com linguagem acolhedora.
           </p>
         </div>
 

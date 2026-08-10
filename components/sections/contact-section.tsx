@@ -8,10 +8,10 @@ import { Instagram, MapPin, MessageCircle } from "lucide-react";
 import { WHATSAPP_APPOINTMENT_URL } from "@/lib/data";
 
 const officeImages = [
-  "/images/Clinic-1.png",
-  "/images/Clinic-2.png",
-  "/images/Clinic-3.png",
-  "/images/Clinic-4.png",
+  "/images/clinic-new/wstc-exterior.jpg",
+  "/images/clinic-new/neonatus-recepcao.jpg",
+  "/images/clinic-new/neonatus-consultorio.jpg",
+  "/images/clinic-new/neonatus-espaco-infantil.jpg",
 ];
 
 export function ContactSection() {
@@ -96,10 +96,8 @@ export function ContactSection() {
                       Endereço
                     </p>
                     <p className="text-lg font-semibold">
-                      Av. Santos Dumont, 1510 — Sala 409
+                      Clínica NeoNatus - Av Washington Soares, 3663 - WSTC, Sala 608
                     </p>
-                    <p>Edifício Manhattan Square Garden, Aldeota</p>
-                    <p>Fortaleza / CE — CEP 60150-161</p>
                   </div>
                 </div>
               </div>
