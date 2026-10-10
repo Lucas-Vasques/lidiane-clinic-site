@@ -172,3 +172,10 @@ h4 {
     radial-gradient(circle at top left, rgba(220, 128, 93, 0.12), transparent 30%),
     radial-gradient(circle at bottom right, rgba(133, 135, 96, 0.12), transparent 32%);
 }
+
+@media (width < 640px) {
+  .hero-grid.section-spacing {
+    padding-top: 0.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
